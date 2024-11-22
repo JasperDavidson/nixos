@@ -87,15 +87,16 @@
     ];
   };
 
-  # Install firefox.
-  programs.firefox.enable = true;
+  # Blueooth
+  hardware.bluetooth.enable = true; # enables support for Bluetooth
+  hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = [
 	  pkgs.neofetch
 	  pkgs.htop
 	  pkgs.vscode
@@ -124,7 +125,13 @@
     pkgs.dunst
     pkgs.rofi-wayland
     pkgs.waybar
+    pkgs.hyprlock
+  ];
+
+  # Fonts
+  fonts.packages = [
     pkgs.font-awesome
+    pkgs.inter
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
