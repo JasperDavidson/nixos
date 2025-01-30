@@ -98,26 +98,30 @@
   # $ nix search wget
   environment.systemPackages = [
 	  pkgs.neofetch
-	  pkgs.htop
+	  # pkgs.htop
 	  pkgs.vscode
-    pkgs.wget
 	  pkgs.git
     pkgs.gcc
-    pkgs.gcc-arm-embedded
-    pkgs.texliveTeTeX
+    # pkgs.gcc-arm-embedded
+    # pkgs.texliveTeTeX
     pkgs.lshw
-    pkgs.rustup
+    # pkgs.rustup
     pkgs.alacritty
     pkgs.bluez
     pkgs.blueman
     pkgs.gnumake
-    pkgs.file
+    # pkgs.file
 
-    pkgs.spotify
+    # pkgs.spotify
     pkgs.jetbrains.idea-community-src
     pkgs.vesktop
     pkgs.floorp
-    pkgs.element-desktop
+    # pkgs.element-desktop
+    pkgs.iverilog
+    pkgs.gtkwave
+    # pkgs.obsidian
+    # pkgs.flex
+    # pkgs.bison
 
     pkgs.rose-pine-cursor
     pkgs.swaybg
@@ -127,6 +131,13 @@
     pkgs.waybar
     pkgs.hyprlock
   ];
+
+  # # Steam
+  # programs.steam = {
+  #   enable = true;
+  #   remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
+  #   dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+  # };
 
   # Fonts
   fonts.packages = [
